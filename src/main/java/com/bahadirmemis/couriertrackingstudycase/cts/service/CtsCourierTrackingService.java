@@ -12,7 +12,6 @@ import com.bahadirmemis.couriertrackingstudycase.dlv.service.DlvDistanceCalculat
 import com.bahadirmemis.couriertrackingstudycase.dlv.service.entityservice.DlvDeliveryEntityService;
 import com.bahadirmemis.couriertrackingstudycase.dlv.service.entityservice.DlvDeliveryMovementEntityService;
 import com.bahadirmemis.couriertrackingstudycase.str.dto.StrStoreInfoDto;
-import com.bahadirmemis.couriertrackingstudycase.str.helper.StrStoreHelper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,8 +20,6 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
-import static java.time.temporal.ChronoUnit.SECONDS;
 
 /**
  * @author Bahadır Memiş
@@ -126,7 +123,7 @@ public class CtsCourierTrackingService {
                 activeDelivery.setDistance(totalDeliveryDistance);
                 activeDelivery.setStoreName(strStoreInfoDto.getName());
 
-                activeDelivery = dlvDeliveryEntityService.save(activeDelivery);
+                dlvDeliveryEntityService.save(activeDelivery);
             }
 
         }

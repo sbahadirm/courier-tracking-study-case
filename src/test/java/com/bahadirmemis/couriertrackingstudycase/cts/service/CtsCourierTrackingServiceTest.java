@@ -64,7 +64,7 @@ class CtsCourierTrackingServiceTest {
     }
 
     @Test
-    void saveCourierPosition_whenThereIsNoActiveDelivery() {
+    void shouldSaveCourierPosition_whenThereIsNoActiveDelivery() {
 
         CtsCourierLocationInfoDto ctsCourierLocationInfoDto = mock(CtsCourierLocationInfoDto.class);
         when(ctsCourierLocationInfoDto.getCourierId()).thenReturn(1L);
@@ -82,7 +82,7 @@ class CtsCourierTrackingServiceTest {
     }
 
     @Test
-    void saveCourierPosition_whenReenteredIsTrue() {
+    void shouldSaveCourierPosition_whenReenteredIsTrue() {
 
         LocalDateTime lastMovementDate = LocalDateTime.of(2022, 4, 5, 12, 0, 0);
 
@@ -104,7 +104,7 @@ class CtsCourierTrackingServiceTest {
     }
 
     @Test
-    void saveCourierPosition_whenReenteredFalseAndNotInRangeOfStores() {
+    void shouldSaveCourierPosition_whenReenteredFalseAndNotInRangeOfStores() {
 
         LocalDateTime lastMovementDate = LocalDateTime.of(2022, 4, 5, 12, 0, 0);
         LocalDateTime time = LocalDateTime.of(2022, 4, 5, 12, 2, 0);
@@ -127,7 +127,7 @@ class CtsCourierTrackingServiceTest {
     }
 
     @Test
-    void saveCourierPosition_whenReenteredFalseAndInRangeOfStores() {
+    void shouldSaveCourierPosition_whenReenteredFalseAndInRangeOfStores() {
 
         LocalDateTime lastMovementDate = LocalDateTime.of(2022, 4, 5, 12, 0, 0);
         LocalDateTime time = LocalDateTime.of(2022, 4, 5, 12, 2, 0);

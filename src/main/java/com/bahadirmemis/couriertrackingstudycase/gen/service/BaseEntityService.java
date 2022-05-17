@@ -5,8 +5,6 @@ import com.bahadirmemis.couriertrackingstudycase.gen.entity.BaseEntity;
 import com.bahadirmemis.couriertrackingstudycase.gen.enums.GenErrorMessage;
 import com.bahadirmemis.couriertrackingstudycase.gen.exceptions.ItemNotFoundException;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;

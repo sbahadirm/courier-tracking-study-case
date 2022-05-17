@@ -51,6 +51,7 @@ public class CtsLocationControlService {
         Optional<StrStoreInfoDto> storeInfoDtoOptional = strStoreInfoDtoList.stream()
                 .filter(strStoreInfoDto -> isEntered(strStoreInfoDto, longitude, latitude))
                 .findFirst();
+
         return storeInfoDtoOptional;
     }
 }
